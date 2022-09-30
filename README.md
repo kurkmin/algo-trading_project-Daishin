@@ -6,4 +6,6 @@ Algo-trading project using Cybos Plus API from Daishin Securities
 Reference: 
 https://wikidocs.net/2870,
 https://learn.microsoft.com/en-us/windows/win32/com/component-object-model--com--portal?redirectedfrom=MSDN,
-https://learn.microsoft.com/en-us/windows/win32/api/ 
+https://learn.microsoft.com/en-us/windows/win32/api/, 
+https://seekingalpha.com/article/4086987-arbitrage-exists-review-of-best-strategies-posted-on-sa-and-invitation-to-join-us, 
+https://www.econstor.eu/bitstream/10419/116783/1/833997289.pdf 
