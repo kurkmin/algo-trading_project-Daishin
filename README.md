@@ -2,7 +2,7 @@
 This is algo-trading project using Cybos Plus API from Daishin Securities. The trading strategy will be based on the idea of pair-trading that finds statistical arbitrage opportunities between two stocks (e.g. preferred stock and common stock).
 
 ## Minimum Viable Product (MVP):
-Make a trading-program work! 
+Make it work! 
 
 ### Possible Extenstion: 
 Create user-friendly app (e.g. React for front-end and Spring for back-end) to change its strategy when there is no arbitrage in market. 
