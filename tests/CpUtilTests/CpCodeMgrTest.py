@@ -23,5 +23,5 @@ class CpCodeMgrTest(unittest.TestCase):
         # ! this method returns the type, given a code of (종목)
         self.assertEqual(actualType, expectedType)
 
-        
+
 
