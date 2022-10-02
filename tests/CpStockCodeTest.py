@@ -6,7 +6,7 @@ class CpStockCodeTest(unittest.TestCase):
         self.stocks = client.Dispatch("CpUtil.CpStockCode")
 
     def test_GetCount(self):
-        self.assertEqual(3724, self.stocks.GetCount())
+        self.assertEqual(3725, self.stocks.GetCount())
         # GetCount() method under CpStockCode class returns the total number of stocks listed on exchanges in Korea
 
     def test_GetData_code(self):
@@ -28,9 +28,6 @@ class CpStockCodeTest(unittest.TestCase):
         for i in range(0, 3):
             expected_stocks.append(self.stocks.getData(1,i))
         self.assertEqual(actual_stocks, expected_stocks)
-
-    # should find method be created in somewhere in a new generated class?
-    # the method (NameToCode) already exists in CpStockCode class
 
     def test_NameToCode(self):
         self.assertEqual('A035420', self.stocks.NameToCode('NAVER'))
