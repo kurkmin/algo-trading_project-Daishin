@@ -12,6 +12,7 @@ Cybos Plus API uses win32com.client. According to Microsoft, Component Object Mo
 
 ##### Reference: 
 https://wikidocs.net/2870,
+http://www.cesarkallas.net/arquivos/apostilas/python/doc/Python%20Programming%20on%20Win32_%20Chapter%2012%20Advanced%20Python%20and%20COM.pdf, 
 https://learn.microsoft.com/en-us/windows/win32/com/component-object-model--com--portal?redirectedfrom=MSDN,
 https://learn.microsoft.com/en-us/windows/win32/api/, 
 https://seekingalpha.com/article/4086987-arbitrage-exists-review-of-best-strategies-posted-on-sa-and-invitation-to-join-us, 
