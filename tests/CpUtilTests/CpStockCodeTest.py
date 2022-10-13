@@ -6,7 +6,7 @@ class CpStockCodeTest(unittest.TestCase):
         self.stocks = client.Dispatch("CpUtil.CpStockCode")
 
     def test_GetCount(self):
-        self.assertEqual(3725, self.stocks.GetCount())
+        self.assertEqual(3733, self.stocks.GetCount())
         # GetCount() method under CpStockCode class returns the total number of stocks listed on exchanges in Korea
 
     def test_GetData_code(self):
