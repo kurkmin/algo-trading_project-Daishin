@@ -14,13 +14,13 @@ class MarketEyeTest(unittest.TestCase):
         self.market_eye.BlockRequest()
 
     @unittest.skip("expected value does not match with actual one")
-    def test_current_price(self):
+    def test_get_current_price(self):
         expected_current_price = 13950
         actual_current_price = self.market_eye.GetDataValue(0, 0)
         self.assertEqual(expected_current_price, actual_current_price)
 
     @unittest.skip("expected value does not match with actual one")
-    def test_per(self):
+    def test_get_per(self):
         expected_per = 4.139999866485596
         actual_per = self.market_eye.GetDataValue(1, 0)
         self.assertEqual(expected_per, actual_per)
@@ -36,3 +36,5 @@ class MarketEyeTest(unittest.TestCase):
         expected_ltm = 202206
         actual_ltm = self.market_eye.GetDataValue(3, 0)
         self.assertEqual(expected_ltm, actual_ltm)
+
+

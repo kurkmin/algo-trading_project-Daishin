@@ -16,12 +16,25 @@ class CpCodeMgrTest(unittest.TestCase):
     # https://wikidocs.net/3686 states GetStockListByMarket(1) returns all stocks' codes in tuple
 
     def test_GetStockSectionKind(self):
-        actualType = 1
+        expected_type_code = 1
         # In the documentation, stock type binds to integer value 1
         # similarly, ETF type = 10 whereas ETN type = 17
-        expectedType = self.CpCodeMgr.GetStockSectionKind('A000020')
+        actual_type_code = self.CpCodeMgr.GetStockSectionKind('A000020')
         # ! this method returns the type, given a code of (종목)
-        self.assertEqual(actualType, expectedType)
+        self.assertEqual(expected_type_code, actual_type_code)
+
+    def test_GetIndustryCode(self):
+        expected_value = "종합주가지수"
+        industry_code = self.CpCodeMgr.GetIndustryList()[0]
+        actual_value = self.CpCodeMgr.GetIndustryName(industry_code)
+        self.assertEqual(expected_value, actual_value)
+
+    def test_GetGroupCode(self):
+        expected_value = "CJ씨푸드"
+        stock_code = self.CpCodeMgr.GetGroupCodeList(5)[0]
+        actual_value = self.CpCodeMgr.CodeToName(stock_code)
+        self.assertEqual(expected_value, actual_value)
+
 
 
 

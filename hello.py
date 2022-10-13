@@ -1,6 +1,7 @@
-import unittest
+# codes to be added
 import win32com.client
 
+# under StockChartTest
 stock_chart = win32com.client.Dispatch("CpSysDib.StockChart")
 stock_chart.SetInputValue(0, "A003540")
 stock_chart.SetInputValue(1, ord('1'))
@@ -21,16 +22,28 @@ for i in range(numData):
         print(stock_chart.GetDataValue(j, i), end=" ")
     print("")
 
-market_eye = win32com.client.Dispatch("CpSysDib.MarketEye")
-market_eye.SetInputValue(0, (4, 67, 70, 111))
-market_eye.SetInputValue(1, 'A003540')
-market_eye.BlockRequest()
-# print("현재가: ", instMarketEye.GetDataValue(0, 0))
-# print("PER: ", instMarketEye.GetDataValue(1, 0))
-# print("EPS: ", instMarketEye.GetDataValue(2, 0))
-# print("최근분기년월: ", instMarketEye.GetDataValue(3, 0))}
+# under somewhere
 
-    # ! comments for setUp needed
-    # https://wikidocs.net/3684
-    # https://money2.daishin.com/e5/mboard/ptype_basic/HTS_Plus_Helper/DW_Basic_Read_Page.aspx?boardseq=284&seq=102&page=1&searchString=stockchart&p=8839&v=8642&m=9508
+import win32com.client
 
+instCpCodeMgr = win32com.client.Dispatch("CpUtil.CpCodeMgr")
+instMarketEye = win32com.client.Dispatch("CpSysDib.MarketEye")
+
+tarketCodeList = instCpCodeMgr.GetGroupCodeList(5)
+
+# Get PER
+instMarketEye.SetInputValue(0, 67)
+instMarketEye.SetInputValue(1, tarketCodeList)
+
+# BlockRequest
+instMarketEye.BlockRequest()
+
+# GetHeaderValue
+numStock = instMarketEye.GetHeaderValue(2)
+
+# GetData
+sumPer = 0
+for i in range(numStock):
+    sumPer += instMarketEye.GetDataValue(0, i)
+
+print("Average PER: ", sumPer / numStock)
